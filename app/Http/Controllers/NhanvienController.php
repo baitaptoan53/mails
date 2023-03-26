@@ -38,7 +38,7 @@ class NhanvienController extends Controller
     {
         $request->validate([
             'ten' => 'required',
-            'vi_tri' => 'required',
+            'vi_tri_lam_viec' => 'required',
             'luong' => 'required',
             'phong_ban' => 'required',
         ]);
@@ -84,7 +84,7 @@ class NhanvienController extends Controller
     {
         $request->validate([
             'ten' => 'required',
-            'vi_tri' => 'required',
+            'vi_tri_lam_viec' => 'required',
             'luong' => 'required',
             'phong_ban' => 'required',
         ]);
