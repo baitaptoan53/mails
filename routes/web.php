@@ -24,8 +24,8 @@ Route::get('/', function () {
 });
 Route::resource('nhanvien', NhanvienController::class);
 Route::get('/login',[LoginController::class,'index'])->name('login.index');
-Route::get('/register',[RegisterController::class,'index'])->name('register.index');
+Route::get('/register',[RegisterController::class,'index'])->name('register.index')->middleware('authorization');
 Route::post('/login',[LoginController::class,'login'])->name('login');
 Route::post('/register',[RegisterController::class,'register'])->name('register');
 
-Route::get('send-email', [SendEmailController::class, 'index']);
+Route::get('/sendemail', [SendEmailController::class, 'index']);

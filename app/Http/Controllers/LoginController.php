@@ -15,7 +15,7 @@ class LoginController extends Controller
     {
         $credentials = request()->only('email', 'password');
         if(Auth::attempt($credentials)){
-            return redirect()->route('welcome');
+            return redirect()->route('nhanvien.index');
         }
         else{
             return redirect()->route('login')->withErrors(['email' => 'Email or password is incorrect']);
